@@ -1,18 +1,18 @@
 int min(List<int> n) {
-  int a = 0;
-  int b = n.length - 1;
+  int a = 0; //start
+  int b = n.length - 1; //End
 
   while (a < b) {
-    int r = a + (b - a) ~/ 2;
+    int r = a + (b - a) ~/ 2; //array calculation
 
-    if (n[r] > n[b]) {
-      a = r + 1;
+    if (n[r] > n[b]) { //checking greater value from end values
+      a = r + 1; //minimum from start to center
     } else {
-      b = r;
+      b = r; //minimum from end to center
     }
   }
 
-  return n[a];
+  return n[a]; //minimum value
 }
 
 void main() {
